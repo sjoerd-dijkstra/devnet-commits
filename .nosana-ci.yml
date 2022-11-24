@@ -1,0 +1,14 @@
+nosana:
+    description: Test Nosana CI
+    backend: IPFS
+
+global:
+    image: alpine
+    trigger:
+        branch:
+            - main
+
+jobs:
+    - name: lfg
+      commands:
+        - echo hello world
