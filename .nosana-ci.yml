@@ -12,3 +12,4 @@ jobs:
     - name: lfg
       commands:
         - echo hello world
+        - exit 1
