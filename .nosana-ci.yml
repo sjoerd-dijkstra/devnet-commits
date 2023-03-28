@@ -1,15 +1,13 @@
 nosana:
-    description: Test Nosana CI
-    backend: IPFS
+  description: Test Nosana CI
 
 global:
-    image: alpine
-    trigger:
-        branch:
-            - main
+  image: nosana/solana
+  trigger:
+    branch:
+      - main
 
 jobs:
-    - name: lfg
-      commands:
-        - echo hello world
-        - exit 1
+  - name: lfg
+    commands:
+      - jq -R -s 'split("\n")' .nosana-ci.yml
